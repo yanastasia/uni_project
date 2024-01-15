@@ -1,3 +1,4 @@
+//delete it not needed
 import React from 'react';
 import { Inertia } from '@inertiajs/inertia';
 import '../../css/StartingPage.css';

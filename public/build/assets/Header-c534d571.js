@@ -1,0 +1,1 @@
+import{j as e}from"./app-66c13518.js";function t({children:s}){return e.jsxs(e.Fragment,{children:[e.jsx("div",{className:"background",children:e.jsx("div",{className:"text",children:"Lets get things done"})}),e.jsx("hr",{})]})}export{t as H};

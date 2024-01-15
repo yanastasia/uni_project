@@ -6,9 +6,10 @@ import MenuButtons from '../components/MenuButtons';
 import CreateBoardForm from '../components/CreateBoardForm';
 import OkDeleteBoardButtons from '../components/OkDeleteBoardButtons';
 import Header from '../Layouts/Header';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import { Head } from '@inertiajs/react';
 
-
-function BoardsPage({boards: initialBoards}) {
+function BoardsPage({boards: initialBoards, auth}) {
     const [isCreateOptionVisible, setCreateOptionVisible] = useState(false);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -50,10 +51,14 @@ function BoardsPage({boards: initialBoards}) {
 
     return (
         <>
-           <Header/>
+            <AuthenticatedLayout
+                user={auth.user}
+            >
+            <Head title="Boards" />
+            <Header />
             <MenuButtons {...componentProps} />
             <div className={styles.containerbackground}>
-                <p>Yonko's Design Thinking App</p>
+                <p>Stay Informed, Stay Ahead!</p>
             </div>
 
             <div className={styles.boards}>
@@ -75,6 +80,8 @@ function BoardsPage({boards: initialBoards}) {
             {
                 isCreateOptionVisible && <OkDeleteBoardButtons {...buttonProps} />
             }
+        </AuthenticatedLayout>
+
         </>
     );
 }

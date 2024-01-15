@@ -88,7 +88,7 @@ function NotesPage({ notes: initialNotes }) {
             <Header />
             <RightSideButtons {...componentProps} />
             <div className={styles.containerbackground}>
-                <p>Yonko's Design Thinking App</p>
+                <p>Stay Informed, Stay Ahead!</p>
             </div>
 
             <main>
