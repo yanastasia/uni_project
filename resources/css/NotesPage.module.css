@@ -1,0 +1,252 @@
+.text {
+    padding-top: 20px;
+    font-size: 60px;
+    text-align: center;
+    color: #E6F4F1;
+    font-family: "monospace";
+    font-weight: 100;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+}
+
+.notes {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.sticky_notes {
+    font-weight: bold;
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 5px;
+    border: 4px solid #1EA2A4;
+    background-clip:border-box;
+    width: 200px;
+    height: 170px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: transform .2s;
+    overflow: hidden;
+
+}
+
+.sticky_notes:hover {
+    transform: scale(1.5);
+    overflow: scroll;
+}
+
+.right_side_buttons {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+.menu_buttons {
+    width: 150px;
+    height: 35px;
+    margin-bottom: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #1EA2A4;
+}
+
+.menu_buttons:hover {
+    background-color: #96B1AD;
+}
+
+.containerbackground {
+    text-align: center;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: 40%;
+    width: 100%;
+    font-size: 80px;
+    color: #c3c7cb;
+    opacity: 0.3;
+}
+
+
+.select_option {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    /*margin-left: 11.3%; */
+}
+
+.box {
+    border: 2px solid #1EA2A4;
+    width: 500px;
+    height: 300px;
+    padding-top: 10px;
+
+    border-radius: 3px;
+}
+
+.options {
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.option_button {
+    width: 70px;
+    height: 30px;
+    border: 1px;
+}
+
+:global(#light_green) {
+    border-radius: 5px 0 0 5px;
+    background-color: #A9CEC2;
+}
+
+.light_green {
+    border-radius: 5px 0 0 5px;
+    background-color: #A9CEC2;
+}
+
+:global(#light_yellow) {
+    background-color: #F9F871;
+}
+
+.light_yellow {
+    background-color: #F9F871;
+}
+
+:global(#light_purple) {
+    background-color: #F2ECFF;
+}
+
+.light_purple {
+    background-color: #F2ECFF;
+}
+
+:global(#light_grey) {
+    background-color: #D3D3D3;
+}
+
+.light_grey {
+    background-color: #D3D3D3;
+}
+
+:global(#light_orange) {
+    background-color: #FFD7BC;
+}
+
+.light_orange {
+    background-color: #FFD7BC;
+}
+
+:global(#light_blue) {
+    border-radius: 0 5px 5px 0;
+    background-color: #98B6CE;
+}
+
+.light_blue {
+    border-radius: 0 5px 5px 0;
+    background-color: #98B6CE;
+}
+
+.color_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 30px;
+}
+
+.lower_buttons {
+    border: 1px;
+    height: 40px;
+    font-family: "cursive";
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+:global(#OK_button) {
+    color: #1EA2A4;
+    background-color: #FFFFFF;
+    width: 200px;
+    border: 2px solid #1EA2A4;
+}
+
+:global(#OK_button:hover) {
+    background-color: #CDDADA;
+}
+
+:global(#delete_button) {
+    color: white;
+    background-color: #FF2424;
+    width: 245px;
+}
+
+:global(#delete_button:hover) {
+    background-color: rgb(185, 26, 26);
+}
+
+@media all and (orientation: portrait) {
+
+    .right_side_buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin-right: 20%;
+        margin-top: 40px;
+    }
+
+    .notes {
+        margin-top: 15%;
+        margin-left: 12%;
+    }
+    .sticky_notes {
+        display: inline-flex;
+        flex-direction: column;
+        width: 220px;
+        height: 200px;
+    }
+
+    /*.select_option {
+        margin-left: 0%;
+    }
+    */
+
+}
+
+.input {
+    display: none;
+}
+
+.vote_button {
+    margin-left: 160px;
+    margin-top: 140px;
+    position: fixed;
+    width: 25px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #1EA2A4;
+}
+
+.vote_text {
+    width: 200px;
+    height: 170px;
+    text-align: center;
+    overflow: scroll;
+}
+
